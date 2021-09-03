@@ -1,4 +1,4 @@
 extends Node2D
 
-var looping : bool = false
+export var looping : bool = true
 onready var autodelete_y : float = OS.window_size.y
