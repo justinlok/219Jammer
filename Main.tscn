@@ -9,7 +9,8 @@
 script = ExtResource( 3 )
 
 [node name="wood slab" parent="." instance=ExtResource( 4 )]
-position = Vector2( 274.673, 181.107 )
+position = Vector2( 238.997, 139.485 )
+rotation = -0.952433
 
 [node name="Wall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 474.775, 171.76 )
