@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/wood slab.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Main.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="wood slab" parent="." instance=ExtResource( 2 )]
+position = Vector2( 274.673, 181.107 )
+
+[node name="Wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 474.775, 171.76 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 749.666, 87.3076 )
+
+[node name="Ball2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300.369, 53.2667 )

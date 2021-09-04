@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/CampaignButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/SandboxButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/bsod.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=5]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/UserInterface/QuitButton.gd" type="Script" id=7]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 1 )]
+margin_left = -135.775
+margin_top = 103.49
+margin_right = 128.225
+margin_bottom = 177.49
+rect_scale = Vector2( 1.11515, 1.13723 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.9797
+margin_top = -149.303
+margin_right = 33.0203
+margin_bottom = -21.3026
+rect_scale = Vector2( 1.58447, 1.31774 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CampaignButton" parent="Menu" instance=ExtResource( 2 )]
+margin_right = 120.0
+margin_bottom = 40.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="SandboxButton" parent="Menu" instance=ExtResource( 3 )]
+margin_top = 44.0
+margin_right = 120.0
+margin_bottom = 84.0
+
+[node name="QuitButton" parent="Menu" instance=ExtResource( 6 )]
+script = ExtResource( 7 )
+
+[connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]
