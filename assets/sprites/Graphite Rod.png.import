@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wood Plank (vertical).png-4670b048495dfb63e01e24efd20a704f.stex"
+path="res://.import/Graphite Rod.png-b1b3329802957bd6403f3701248aee42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Wood Plank (vertical).png"
-dest_files=[ "res://.import/Wood Plank (vertical).png-4670b048495dfb63e01e24efd20a704f.stex" ]
+source_file="res://assets/sprites/Graphite Rod.png"
+dest_files=[ "res://.import/Graphite Rod.png-b1b3329802957bd6403f3701248aee42.stex" ]
 
 [params]
 
