@@ -48,16 +48,17 @@ __meta__ = {
 }
 
 [node name="CampaignButton" parent="Menu" instance=ExtResource( 2 )]
-margin_right = 120.0
+margin_right = 121.0
 margin_bottom = 40.0
 rect_scale = Vector2( 1, 1 )
 
 [node name="SandboxButton" parent="Menu" instance=ExtResource( 3 )]
 margin_top = 44.0
-margin_right = 120.0
+margin_right = 121.0
 margin_bottom = 84.0
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 6 )]
+margin_right = 121.0
 script = ExtResource( 7 )
 
 [connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]
