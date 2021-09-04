@@ -32,6 +32,7 @@ margin_top = 103.49
 margin_right = 128.225
 margin_bottom = 177.49
 rect_scale = Vector2( 1.11515, 1.13723 )
+text = "Pinball Poggers"
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
