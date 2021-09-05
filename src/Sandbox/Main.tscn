@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=2]
-=======
-[gd_scene load_steps=11 format=2]
->>>>>>> Stashed changes
 
 [ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Parts/Wood Slab.tscn" type="PackedScene" id=2]
@@ -10,12 +6,7 @@
 [ext_resource path="res://src/Main.gd" type="Script" id=4]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=6]
-<<<<<<< Updated upstream
 [ext_resource path="res://src/Parts/Bumper.tscn" type="PackedScene" id=7]
-=======
-[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=7]
-[ext_resource path="res://src/Parts/Portal.tscn" type="PackedScene" id=8]
->>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2062.8, 68.1671 )
@@ -32,7 +23,6 @@ layer = 100
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 5 )]
 
 [node name="EditorControls" parent="UserInterface" instance=ExtResource( 6 )]
-theme = ExtResource( 7 )
 
 [node name="wood slab" parent="." instance=ExtResource( 2 )]
 position = Vector2( 274.673, 181.107 )
@@ -71,13 +61,5 @@ shape = SubResource( 1 )
 position = Vector2( -2000, 0 )
 shape = SubResource( 2 )
 
-<<<<<<< Updated upstream
 [node name="Bumper" parent="." instance=ExtResource( 7 )]
 position = Vector2( 762.979, 258.519 )
-=======
-[node name="Portal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 747.421, 178.293 )
-
-[node name="Portal2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 314.933, 319.786 )
->>>>>>> Stashed changes
