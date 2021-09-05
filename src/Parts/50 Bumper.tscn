@@ -4,6 +4,7 @@
 [ext_resource path="res://src/Parts/Bumper.tscn" type="PackedScene" id=2]
 
 [node name="50 Bumper" instance=ExtResource( 2 )]
+scale = Vector2( 0.6, 0.6 )
 bumper_strength = 25
 score = 50
 

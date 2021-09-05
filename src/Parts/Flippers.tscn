@@ -4,6 +4,7 @@
 [ext_resource path="res://Flippers.gd" type="Script" id=2]
 
 [node name="Flippers" type="RigidBody2D"]
+scale = Vector2( 1.4, 1.4 )
 mode = 1
 script = ExtResource( 2 )
 
