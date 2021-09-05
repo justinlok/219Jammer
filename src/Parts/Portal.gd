@@ -6,5 +6,5 @@ var lock_portal = false
 
 func do_lock():
 	lock_portal = true
-	yield(get_tree().creat_timer(0.3), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
 	lock_portal = false

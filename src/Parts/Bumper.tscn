@@ -14,5 +14,4 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-[connection signal="area_entered" from="." to="." method="_on_Bumper_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Bumper_body_entered"]

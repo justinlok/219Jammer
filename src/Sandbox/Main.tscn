@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Parts/Wood Slab.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Parts/Bumper.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Parts/Portal.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2062.8, 68.1671 )
@@ -15,6 +16,7 @@ extents = Vector2( 2062.8, 68.1671 )
 extents = Vector2( 74.2856, 2929.74 )
 
 [node name="Sandbox" type="Node2D"]
+position = Vector2( 0, -1.88773 )
 script = ExtResource( 4 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
@@ -29,12 +31,6 @@ position = Vector2( 274.673, 181.107 )
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
 position = Vector2( 474.775, 171.76 )
-
-[node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 749.666, 87.3076 )
-
-[node name="Ball2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 300.369, 53.2667 )
 
 [node name="Room Wall 1" type="RigidBody2D" parent="."]
 
@@ -63,3 +59,12 @@ shape = SubResource( 2 )
 
 [node name="Bumper" parent="." instance=ExtResource( 7 )]
 position = Vector2( 762.979, 258.519 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 702.116, 56.029 )
+
+[node name="Portal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 703.618, 178.92 )
+
+[node name="Portal2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 431.782, 341.266 )
