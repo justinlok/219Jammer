@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Parts/Bumper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/sprites/100 bumper.png" type="Texture" id=2]
+
+[node name="100 Bumper" instance=ExtResource( 1 )]
+bumper_strength = 100
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 2 )
