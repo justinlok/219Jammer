@@ -4,6 +4,7 @@
 [ext_resource path="res://assets/sprites/bumper26.png" type="Texture" id=2]
 
 [node name="25 Bumper" instance=ExtResource( 1 )]
+bumper_strength = 25
 score = 25
 
 [node name="Sprite" parent="." index="1"]
