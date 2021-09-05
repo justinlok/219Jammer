@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Wood Plank (vertical).png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22.3372, 73.7282 )
+
+[node name="wood slab" type="RigidBody2D"]
+position = Vector2( 451.178, 179.219 )
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -4.02239 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.943848, 0 )
+scale = Vector2( 0.67196, 0.573341 )
+texture = ExtResource( 1 )
