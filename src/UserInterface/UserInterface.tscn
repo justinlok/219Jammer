@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/SandboxButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
+[ext_resource path="res://src/UserInterface/RetryButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/UserInterface/UserInterface.gd" type="Script" id=6]
+
+[node name="UserInterface" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -161.852
+margin_top = 37.1745
+margin_right = -48.8519
+margin_bottom = 71.1745
+text = "Score: %s"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.235294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="PauseOverlay" instance=ExtResource( 3 )]
+margin_left = -82.5
+margin_top = 133.321
+margin_right = 82.5
+margin_bottom = 204.321
+text = "Paused"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -105.0
+margin_top = -99.0
+margin_right = 105.0
+margin_bottom = 99.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" parent="PauseOverlay/VBoxContainer" instance=ExtResource( 5 )]
+margin_right = 210.0
+margin_bottom = 63.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="SandboxButton" parent="PauseOverlay/VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 67.0
+margin_right = 210.0
+margin_bottom = 130.0
+text = "Main Menu"
+next_scene_path = "res://src/Screens/MainMenu.tscn"
+
+[node name="QuitButton" parent="PauseOverlay/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 134.0
+margin_right = 210.0
+margin_bottom = 198.0
+size_flags_vertical = 3
+
+[connection signal="button_up" from="PauseOverlay/VBoxContainer/QuitButton" to="PauseOverlay/VBoxContainer/QuitButton" method="_on_button_up"]

@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22.3372, 73.7282 )
 
-[node name="wood slab" type="RigidBody2D"]
+[node name="Wood Slab" type="RigidBody2D"]
 position = Vector2( 451.178, 179.219 )
 mode = 1
 
