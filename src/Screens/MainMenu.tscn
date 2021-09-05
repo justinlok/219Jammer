@@ -1,17 +1,17 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/UserInterface/CampaignButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/UserInterface/SandboxButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/bsod.jpg" type="Texture" id=4]
-[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=5]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/bsod.jpg" type="Texture" id=2]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/CampaignButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UserInterface/SandboxButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=6]
 
 [node name="MainMenu" type="Control"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 5 )
+theme = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -19,14 +19,14 @@ __meta__ = {
 [node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 4 )
+texture = ExtResource( 2 )
 expand = true
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" parent="." instance=ExtResource( 1 )]
+[node name="Title" parent="." instance=ExtResource( 3 )]
 margin_left = -135.775
 margin_top = 103.49
 margin_right = 128.225
@@ -49,12 +49,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CampaignButton" parent="Menu" instance=ExtResource( 2 )]
+[node name="CampaignButton" parent="Menu" instance=ExtResource( 4 )]
 margin_right = 121.0
 margin_bottom = 40.0
 rect_scale = Vector2( 1, 1 )
+next_scene_path = ""
 
-[node name="SandboxButton" parent="Menu" instance=ExtResource( 3 )]
+[node name="SandboxButton" parent="Menu" instance=ExtResource( 5 )]
 margin_top = 44.0
 margin_right = 121.0
 margin_bottom = 84.0
@@ -62,5 +63,4 @@ margin_bottom = 84.0
 [node name="QuitButton" parent="Menu" instance=ExtResource( 6 )]
 margin_right = 121.0
 size_flags_vertical = 3
-
 [connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]
