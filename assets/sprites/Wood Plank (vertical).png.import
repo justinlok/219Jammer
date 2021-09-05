@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/steel ball bearing.png-59ac4a5a9ffb1273d37ab3ee0ca83f7c.stex"
+path="res://.import/Wood Plank (vertical).png-fc60504aee5be2364be72af3bd38e692.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/steel ball bearing.png"
-dest_files=[ "res://.import/steel ball bearing.png-59ac4a5a9ffb1273d37ab3ee0ca83f7c.stex" ]
+source_file="res://assets/sprites/Wood Plank (vertical).png"
+dest_files=[ "res://.import/Wood Plank (vertical).png-fc60504aee5be2364be72af3bd38e692.stex" ]
 
 [params]
 
