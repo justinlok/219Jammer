@@ -1,6 +1,6 @@
 extends Area2D
 export (int) var bumper_strength
-
+export (int) var score
 func light_up():
 	pass
 
