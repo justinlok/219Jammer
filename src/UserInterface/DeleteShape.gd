@@ -1,0 +1,13 @@
+extends Area2D
+
+var is_delete_mode : bool = false
+
+func _input(event):
+	if event.is_action_pressed("editor_delete", true):
+		is_delete_mode = true
+	if event.is_action_released("editor_delete"):
+		is_delete_mode = false
+
+
+func _on_DeleteShape_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
