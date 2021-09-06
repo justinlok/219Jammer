@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame_00002.png-1388d32015dcd8c1e02f7d175d9636be.stex"
+path="res://.import/square_bumper_placeholder.png-ef1756469cae6230b30287c4ccf4e814.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Parts/frame_00002.png"
-dest_files=[ "res://.import/frame_00002.png-1388d32015dcd8c1e02f7d175d9636be.stex" ]
+source_file="res://assets/sprites/square_bumper_placeholder.png"
+dest_files=[ "res://.import/square_bumper_placeholder.png-ef1756469cae6230b30287c4ccf4e814.stex" ]
 
 [params]
 
