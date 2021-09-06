@@ -7,6 +7,7 @@ extents = Vector2( 22.3372, 73.7282 )
 
 [node name="Wood Slab" type="RigidBody2D"]
 position = Vector2( 451.178, 179.219 )
+collision_mask = 0
 mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

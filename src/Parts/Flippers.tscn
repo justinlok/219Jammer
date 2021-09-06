@@ -5,6 +5,7 @@
 
 [node name="Flippers" type="RigidBody2D"]
 scale = Vector2( 1.4, 1.4 )
+collision_mask = 0
 mode = 1
 script = ExtResource( 2 )
 
