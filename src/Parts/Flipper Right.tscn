@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Parts/FlipperR.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/flipper.png" type="Texture" id=2]
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/PhysicsMats/Flipper.tres" type="PhysicsMaterial" id=4]
 [ext_resource path="res://src/PhysicsMats/Flipper_CollisionPolygon2DL2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Parts/sword_2.wav" type="AudioStream" id=6]
 
 [node name="FlipperRight" type="Node2D"]
 
@@ -12,6 +13,7 @@
 scale = Vector2( -1.4, 1.4 )
 collision_mask = 0
 mode = 3
+mass = 0.5
 physics_material_override = ExtResource( 4 )
 continuous_cd = 2
 can_sleep = false
@@ -27,3 +29,6 @@ texture = ExtResource( 2 )
 [node name="DeleteShape" parent="FlipperR" instance=ExtResource( 3 )]
 
 [node name="CollisionPolygon2DL2" parent="FlipperR" instance=ExtResource( 5 )]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="FlipperR"]
+stream = ExtResource( 6 )

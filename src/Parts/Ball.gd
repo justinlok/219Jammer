@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Ball
 
 onready var autodelete_y : float = OS.window_size.y
 

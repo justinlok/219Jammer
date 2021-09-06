@@ -1,23 +1,24 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/sprites/burst.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/Elevator_sheet.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/Elevator Shaft.png" type="Texture" id=4]
 [ext_resource path="res://src/Parts/Launcher.gd" type="Script" id=5]
-[ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=6]
+
+[sub_resource type="PhysicsMaterial" id=6]
+bounce = 1.0
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 118.356, 102.44 )
+extents = Vector2( 118.356, 26.5082 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.74536, 347.545 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 45.6062, 236.006 )
+extents = Vector2( 347.612, 11.6677 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 35.9557, 211.021 )
-
-[sub_resource type="Animation" id=2]
-resource_name = "crystal"
+[sub_resource type="Animation" id=4]
 length = 5.0
 step = 0.09
 tracks/0/type = "value"
@@ -33,6 +34,9 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36.7325, 96.7687 )
+
 [node name="Launcher" type="Node2D"]
 position = Vector2( 300, 300 )
 scale = Vector2( 0.5, 0.5 )
@@ -47,21 +51,8 @@ texture = ExtResource( 4 )
 [node name="DeleteShape" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 0.4, 0.4 )
 
-[node name="Ball" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.556, -150 )
-scale = Vector2( 2, 2 )
-
-[node name="Burst" type="Sprite" parent="Ball"]
-position = Vector2( -0.713379, 55.8528 )
-rotation = 3.14159
-scale = Vector2( 0.200006, 0.200006 )
-texture = ExtResource( 2 )
-
-[node name="Tween" type="Tween" parent="Ball"]
-
 [node name="Elevator" type="Sprite" parent="."]
 position = Vector2( -31.0796, 329.613 )
-rotation = 0.0174533
 scale = Vector2( 0.35, 0.35 )
 z_index = 1
 texture = ExtResource( 3 )
@@ -70,6 +61,7 @@ hframes = 6
 [node name="Elevator_floor" type="RigidBody2D" parent="Elevator"]
 position = Vector2( -25.8604, -172.711 )
 mode = 3
+physics_material_override = SubResource( 6 )
 continuous_cd = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
@@ -77,16 +69,22 @@ position = Vector2( 112.424, 73.5179 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
-position = Vector2( 281.372, -207.99 )
-shape = SubResource( 3 )
+position = Vector2( 221.316, -254.326 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
-position = Vector2( -53.9199, -189.743 )
-shape = SubResource( 4 )
+position = Vector2( 10, -250 )
+rotation = -4.71239
+shape = SubResource( 3 )
+one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator"]
-anims/crystal = SubResource( 2 )
+anims/crystal = SubResource( 4 )
 
 [node name="Tween" type="Tween" parent="Elevator"]
 
-[connection signal="tween_all_completed" from="Ball/Tween" to="." method="_on_Tween_tween_all_completed"]
+[node name="BallDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BallDetection"]
+position = Vector2( -1.58917, 193.882 )
+shape = SubResource( 5 )

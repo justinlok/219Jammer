@@ -12,9 +12,7 @@ bounce = 0.1
 radius = 7.32275
 
 [node name="Ball" type="RigidBody2D"]
-mass = 10000.0
 physics_material_override = SubResource( 1 )
-gravity_scale = 0.7
 script = ExtResource( 2 )
 
 [node name="DeleteShape" parent="." instance=ExtResource( 3 )]
