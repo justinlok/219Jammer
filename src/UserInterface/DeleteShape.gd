@@ -10,4 +10,6 @@ func _input(event):
 
 
 func _on_DeleteShape_input_event(viewport, event, shape_idx):
-	get_parent().queue_free()
+	if is_delete_mode && event.is_pressed():
+		get_parent().queue_free()
+

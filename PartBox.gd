@@ -31,7 +31,10 @@ func _ready():
 func _process(delta):
 	if  new_part != null:
 		# Part ghosting when selected.
-		new_part.set_position(get_viewport().get_mouse_position())
+		if is_instance_valid(new_part):
+			new_part.set_position(get_viewport().get_mouse_position())
+		else:
+			new_part = null
 
 func _input(event):
 	# Check key modifier.
