@@ -18,7 +18,7 @@ mode = 1
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )
-bumper_strength = 30
+bumper_strength = 170
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
