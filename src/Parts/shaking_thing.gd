@@ -9,7 +9,7 @@ func _ready():
 
 func _on_Bumper_box_body_entered(body):
 	if bound_check.overlaps_body(body):
-		if body.get_name() == "Ball":
+		if body.get_name().substr(0,4) == "Ball":
 			var flip = self.scale.x/abs(self.scale.x) #account for flipping horizontally
 			var direction = Vector2(cos(deg2rad(rotation_degrees+flip*61)),sin(deg2rad(rotation_degrees+flip*61)))
 			audio.play()
