@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Parts/FlipperR.gd" type="Script" id=2]
+[ext_resource path="res://src/UserInterface/Canvas.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Parts/Flipper Left.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Parts/100 Bumper.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Parts/Flipper Right.tscn" type="PackedScene" id=5]
@@ -23,19 +23,9 @@ extents = Vector2( 2.2876, 180.109 )
 radius = 1.97516
 height = 20.0007
 
-[node name="Level 1" type="Control"]
-anchor_top = -0.00129868
-anchor_right = 1.0
-anchor_bottom = 1.19744
-margin_left = -1.35494
-margin_top = -3.91719
-margin_right = -1.35492
-margin_bottom = -147.012
-rect_rotation = 0.0413121
-rect_pivot_offset = Vector2( 210.434, 44.3978 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sandbox" type="Node2D"]
+
+[node name="Canvas" parent="." instance=ExtResource( 2 )]
 
 [node name="lower bound" type="RigidBody2D" parent="."]
 mode = 1
@@ -185,7 +175,7 @@ polygon = PoolVector2Array( 264.387, 450.761, 265.253, 487.836, 264.803, 524.548
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512.211, 25.1948 )
-script = ExtResource( 2 )
+script = null
 
 [node name="FlipperRight" parent="." instance=ExtResource( 5 )]
 position = Vector2( 574.261, 650.443 )
@@ -266,8 +256,8 @@ scale = Vector2( 0.25, 0.25 )
 
 [node name="Shaking Thing2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 410, 610 )
-rotation = 3.26377
-scale = Vector2( -0.08, 0.08 )
+rotation = 0.122177
+scale = Vector2( 0.08, -0.08 )
 
 [node name="Shaking Thing" parent="." instance=ExtResource( 8 )]
 position = Vector2( 614, 610 )

@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Main.gd" type="Script" id=1]
-[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/Canvas.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Parts/Flipper Right.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Parts/Wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Parts/100 Bumper.tscn" type="PackedScene" id=6]
@@ -17,18 +16,7 @@
 position = Vector2( 0, -1.88773 )
 script = ExtResource( 1 )
 
-[node name="UserInterface" type="CanvasLayer" parent="."]
-layer = 100
-
-[node name="UserInterface" parent="UserInterface" instance=ExtResource( 2 )]
-margin_left = 6.51315
-margin_top = -44.1203
-margin_right = 6.51318
-margin_bottom = -44.1204
-
-[node name="EditorControls" parent="UserInterface" instance=ExtResource( 3 )]
-anchor_left = -0.000643253
-anchor_right = 0.999357
+[node name="Canvas" parent="." instance=ExtResource( 2 )]
 
 [node name="Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( 345.718, 360.31 )
@@ -66,22 +54,18 @@ position = Vector2( 487.171, 192.687 )
 [node name="FlipperLeft" parent="." instance=ExtResource( 12 )]
 position = Vector2( 435.056, 551.48 )
 rotation = 0.523599
-scale = Vector2( 0.6, 0.6 )
 
 [node name="FlipperLeft2" parent="." instance=ExtResource( 12 )]
 position = Vector2( 340.761, 387.328 )
 rotation = 0.523599
-scale = Vector2( 0.6, 0.6 )
 
 [node name="FlipperRight" parent="." instance=ExtResource( 4 )]
 position = Vector2( 584.436, 551.623 )
 rotation = -0.523599
-scale = Vector2( 0.6, 0.6 )
 
 [node name="FlipperRight2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 660.159, 385.298 )
 rotation = -0.523599
-scale = Vector2( 0.6, 0.6 )
 
 [node name="Wall5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 657.706, 384.184 )
