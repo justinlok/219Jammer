@@ -28,6 +28,10 @@ config/icon="res://icon.png"
 
 PlayerData="*res://src/Autoload/PlayerData.tscn"
 
+[display]
+
+window/size/height=720
+
 [gdnative]
 
 singletons=[ "res://git_api.gdnlib" ]
@@ -35,6 +39,7 @@ singletons=[ "res://git_api.gdnlib" ]
 [global]
 
 gravity=false
+collision=false
 
 [input]
 
@@ -119,7 +124,9 @@ Launch={
 
 [physics]
 
+common/physics_fps=120
 common/enable_pause_aware_picking=true
+2d/cell_size=256
 
 [rendering]
 
