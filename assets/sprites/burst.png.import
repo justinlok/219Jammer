@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame_00002.png-1388d32015dcd8c1e02f7d175d9636be.stex"
+path="res://.import/burst.png-f6658e8449276b29387bc1b0dc53c18d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Parts/frame_00002.png"
-dest_files=[ "res://.import/frame_00002.png-1388d32015dcd8c1e02f7d175d9636be.stex" ]
+source_file="res://assets/sprites/burst.png"
+dest_files=[ "res://.import/burst.png-f6658e8449276b29387bc1b0dc53c18d.stex" ]
 
 [params]
 

@@ -4,6 +4,7 @@ onready var PART_BUTTON : PackedScene = preload("res://src/UserInterface/PartBut
 onready var Sandbox : Node2D = find_parent("Sandbox")
 const PARTS_DIR : String = "res://src/Parts/"
 var new_part : Node2D = null
+var new_part_collision_shapes = []
 var is_modifier : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -56,6 +57,26 @@ func _input(event):
 			new_part.rotate(-45 * PI /180)
 		else:
 			new_part.rotate(-15 * PI / 180)
+	elif event.is_action_pressed("editor_scale_x+"):
+		if is_modifier:
+			new_part.scale = Vector2(new_part.scale.x + 0.5, new_part.scale.y)
+		else:
+			new_part.scale = Vector2(new_part.scale.x + 0.1, new_part.scale.y)
+	elif event.is_action_pressed("editor_scale_x-"):
+		if is_modifier:
+			new_part.scale = Vector2(new_part.scale.x - 0.5, new_part.scale.y)
+		else:
+			new_part.scale = Vector2(new_part.scale.x - 0.1, new_part.scale.y)
+	elif event.is_action_pressed("editor_scale_y+"):
+		if is_modifier:
+			new_part.scale = Vector2(new_part.scale.x, new_part.scale.y + 0.5)
+		else:
+			new_part.scale = Vector2(new_part.scale.x, new_part.scale.y + 0.1)
+	elif event.is_action_pressed("editor_scale_y-"):
+		if is_modifier:
+			new_part.scale = Vector2(new_part.scale.x, new_part.scale.y - 0.5)
+		else:
+			new_part.scale = Vector2(new_part.scale.x, new_part.scale.y - 0.1)
 	elif event.is_action_pressed("editor_place"):
 		if is_modifier:
 			print_debug("Pressed")
@@ -68,6 +89,8 @@ func _input(event):
 
 func _place_part() -> void:
 	new_part.set_process(true)
+	for collision_shape_2d in new_part_collision_shapes:
+		collision_shape_2d.disabled = false
 	new_part.modulate = Color(
 		new_part.modulate.r, new_part.modulate.g, new_part.modulate.b, 1)
 	new_part = null
@@ -81,7 +104,23 @@ func _add_button(file : String) -> void:
 
 func set_selected_part(path) -> void:
 	new_part = load(path).instance()
-	new_part.set_process(false)
 	new_part.modulate = Color(
 		new_part.modulate.r, new_part.modulate.g, new_part.modulate.b, 0.5)
 	Sandbox.add_child(new_part)
+	new_part.set_process(false)
+	new_part_collision_shapes = _GetAllEnabledCollisionShape2Ds(new_part)
+	for collision_shape_2d in new_part_collision_shapes:
+		collision_shape_2d.disabled = true
+	
+
+func _GetAllEnabledCollisionShape2Ds(node):
+	var collision_shape_2ds = []
+	if node is CollisionShape2D || node is CollisionPolygon2D:
+		if !node.disabled:
+			collision_shape_2ds.append(node)
+	var children = node.get_children()
+	for child in children:
+		collision_shape_2ds.append_array(_GetAllEnabledCollisionShape2Ds(child))
+	return collision_shape_2ds
+		
+		

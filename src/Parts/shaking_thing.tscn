@@ -8,12 +8,13 @@
 extents = Vector2( 401.349, 104.325 )
 
 [node name="Shaking Thing" type="RigidBody2D"]
-rotation = 3.03338
+rotation = 3.01942
 scale = Vector2( 0.25, 0.25 )
 collision_mask = 0
 mode = 1
 contact_monitor = true
 script = ExtResource( 2 )
+bumper_strength = 50
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -26,7 +27,7 @@ position = Vector2( 68.889, 186.622 )
 rotation = -0.541052
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary_check"]
-position = Vector2( -2.77529, -6.92598 )
+position = Vector2( -9.45569, -2.35777 )
 shape = SubResource( 1 )
 
 [node name="DeleteShape" parent="." instance=ExtResource( 3 )]
