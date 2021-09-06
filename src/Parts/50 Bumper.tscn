@@ -9,5 +9,6 @@ bumper_strength = 80
 score = 50
 
 [node name="Sprite" parent="." index="2"]
-position = Vector2( 0, -2.56952 )
+position = Vector2( 0.67021, 0.017767 )
+scale = Vector2( 0.194121, 0.194121 )
 texture = ExtResource( 1 )
