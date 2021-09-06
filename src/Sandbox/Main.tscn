@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/Main.gd" type="Script" id=1]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Parts/Wall.tscn" type="PackedScene" id=5]
 
 [node name="Sandbox" type="Node2D"]
 position = Vector2( 0, -1.88773 )
@@ -16,3 +17,6 @@ layer = 100
 [node name="EditorControls" parent="UserInterface" instance=ExtResource( 3 )]
 anchor_left = -0.000643253
 anchor_right = 0.999357
+
+[node name="Wall" parent="." instance=ExtResource( 5 )]
+position = Vector2( 347.832, 368.44 )
