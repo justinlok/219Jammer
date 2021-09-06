@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="CollisionPolygon2DL2" type="CollisionPolygon2D"]
+position = Vector2( 11.8351, 0.0970631 )
+rotation = 3.14159
+scale = Vector2( 2.5, 2.5 )
+polygon = PoolVector2Array( 4.76226, -1.56824, 4.83907, 1.81142, -0.19035, 1.65597, -0.266158, 3.85806, -24.5, 2, -24.5, -2, -0.17054, -3.44304, -0.113979, -1.57652 )

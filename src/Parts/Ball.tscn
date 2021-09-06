@@ -5,8 +5,6 @@
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
-friction = 0.05
-bounce = 2.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 24.7757
