@@ -5,7 +5,7 @@
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/PhysicsMats/Flipper.tres" type="PhysicsMaterial" id=4]
 [ext_resource path="res://src/PhysicsMats/Flipper_CollisionPolygon2DL2.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Parts/sword_1.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Sounds/sword_1.wav" type="AudioStream" id=6]
 
 [node name="FlipperLeft" type="Node2D"]
 
