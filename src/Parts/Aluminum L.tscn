@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/sprites/Aluminum L.png" type="Texture" id=1]
+
+[node name="Aluminum L" type="RigidBody2D"]
+position = Vector2( 155.832, 278.499 )
+mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -118, -150, -150, -150, -150, 150, 150, 150, 150, 118, -118, 118 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

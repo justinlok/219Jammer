@@ -5,9 +5,9 @@
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Parts/Wood Slab.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Parts/Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Parts/Aluminum L.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Parts/25 Bumper.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Parts/Portal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/sprites/Aluminum L.png" type="Texture" id=9]
 [ext_resource path="res://src/Parts/FlipperR.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Parts/Flippers.tscn" type="PackedScene" id=12]
@@ -76,15 +76,7 @@ position = Vector2( 709.646, 207.339 )
 position = Vector2( 430.06, 349.016 )
 id = 1
 
-[node name="Aluminum L" type="RigidBody2D" parent="."]
-position = Vector2( 155.832, 278.499 )
-mode = 1
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Aluminum L"]
-polygon = PoolVector2Array( -118, -150, -150, -150, -150, 150, 150, 150, 150, 118, -118, 118 )
-
-[node name="Sprite" type="Sprite" parent="Aluminum L"]
-texture = ExtResource( 9 )
+[node name="Aluminum L" parent="." instance=ExtResource( 6 )]
 
 [node name="FlipperR" parent="." instance=ExtResource( 10 )]
 position = Vector2( 793.921, 580.348 )
