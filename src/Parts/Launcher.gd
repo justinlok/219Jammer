@@ -11,7 +11,7 @@ func _ready():
 	elevator.frame = 0
 	ball.set_mode(1)
 	elevator.position = Vector2(-30.32, -84.731)
-	ball.position = Vector2(0.556, -185)
+	ball.position = Vector2(0.556, -170)
 	burst.visible = false
 	play_entrance()
 
