@@ -4,7 +4,7 @@ onready var PART_BUTTON : PackedScene = preload("res://src/UserInterface/PartBut
 onready var Sandbox : Node2D = find_parent("Sandbox")
 const PARTS_DIR : String = "res://src/Parts/"
 var new_part : Node2D = null
-var is_multiplace : bool = false
+var is_modifier : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,19 +36,25 @@ func _process(delta):
 func _input(event):
 	# Check key modifier.
 	if event.is_action_pressed("editor_modifier"):
-		is_multiplace = true
+		is_modifier = true
 	if event.is_action_released("editor_modifier"):
-		is_multiplace = false
+		is_modifier = false
 
 	# Part placement & handeling.
 	if new_part == null:
 		return
-	if event.is_action_pressed("editor_rorate_cw"):
-		new_part.rotate(15 * PI / 180)
+	if event.is_action_pressed("editor_rotate_cw"):
+		if is_modifier:
+			new_part.rotate(45 * PI /180)
+		else:
+			new_part.rotate(15 * PI / 180)
 	elif event.is_action_pressed("editor_rotate_ccw"):
-		new_part.rotate(-15 * PI / 180)
+		if is_modifier:
+			new_part.rotate(-45 * PI /180)
+		else:
+			new_part.rotate(-15 * PI / 180)
 	elif event.is_action_pressed("editor_place"):
-		if is_multiplace:
+		if is_modifier:
 			print_debug("Pressed")
 			var path : String = new_part.filename
 			print_debug ("path " + path)
