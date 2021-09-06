@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Parts/Portal.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/portalspritesheetaligned.png" type="Texture" id=2]
+[ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 22.1006
@@ -66,6 +67,8 @@ animations = [ {
 position = Vector2( 0.558365, -0.756994 )
 script = ExtResource( 1 )
 
+[node name="DeleteShape" parent="." instance=ExtResource( 3 )]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.0286407, 0.302469 )
 shape = SubResource( 1 )
@@ -74,7 +77,8 @@ shape = SubResource( 1 )
 position = Vector2( -0.056076, -3.49178 )
 scale = Vector2( 0.25877, 0.295034 )
 frames = SubResource( 11 )
-frame = 7
+frame = 2
 playing = true
+
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Portal_body_exited"]

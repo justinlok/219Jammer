@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Aluminum L.png-3db88aaf78e16b5d357901ea68667b57.stex"
+path="res://.import/Aluminum L.png-f49c96ec2ce9604679dc5a2dbb1fc667.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Aluminum L.png"
-dest_files=[ "res://.import/Aluminum L.png-3db88aaf78e16b5d357901ea68667b57.stex" ]
+source_file="res://assets/sprites/Aluminum L.png"
+dest_files=[ "res://.import/Aluminum L.png-f49c96ec2ce9604679dc5a2dbb1fc667.stex" ]
 
 [params]
 
