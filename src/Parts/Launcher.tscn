@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sprites/burst.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/Elevator_sheet.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/Elevator Shaft.png" type="Texture" id=4]
 [ext_resource path="res://src/Parts/Launcher.gd" type="Script" id=5]
+[ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 118.356, 26.5082 )
@@ -32,13 +33,31 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 5 )
 
 [node name="Shaft" type="Sprite" parent="."]
+position = Vector2( 0.143799, 69.1458 )
 rotation = -1.5708
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 4 )
 
+[node name="DeleteShape" parent="." instance=ExtResource( 1 )]
+visible = false
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Ball" parent="." instance=ExtResource( 6 )]
+position = Vector2( 0.556, -150 )
+scale = Vector2( 2, 2 )
+
+[node name="Burst" type="Sprite" parent="Ball"]
+position = Vector2( -0.713379, 55.8528 )
+rotation = 3.14159
+scale = Vector2( 0.200006, 0.200006 )
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="Ball"]
+
 [node name="Elevator" type="Sprite" parent="."]
-position = Vector2( -72.297, 546 )
+position = Vector2( -31.0796, 329.613 )
 rotation = 0.0174533
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.35, 0.35 )
 z_index = 1
 texture = ExtResource( 3 )
 hframes = 6
@@ -48,7 +67,7 @@ position = Vector2( -25.8604, -172.711 )
 mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
-position = Vector2( 109.461, -10.642 )
+position = Vector2( 109.601, -2.6293 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator"]
@@ -56,10 +75,4 @@ anims/crystal = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="Elevator"]
 
-[node name="Burst" type="Sprite" parent="."]
-position = Vector2( 0, 550 )
-rotation = 3.14159
-texture = ExtResource( 2 )
-
-[node name="DeleteShape" parent="." instance=ExtResource( 1 )]
-visible = false
+[connection signal="tween_all_completed" from="Ball/Tween" to="." method="_on_Tween_tween_all_completed"]

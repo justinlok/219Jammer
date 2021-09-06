@@ -5,9 +5,10 @@
 
 [node name="50 Bumper" instance=ExtResource( 2 )]
 scale = Vector2( 0.6, 0.6 )
-bumper_strength = 25
+bumper_strength = 80
 score = 50
 
-[node name="Sprite" parent="." index="1"]
-position = Vector2( 0, -2.56952 )
+[node name="Sprite" parent="." index="2"]
+position = Vector2( 0.67021, 0.017767 )
+scale = Vector2( 0.194121, 0.194121 )
 texture = ExtResource( 1 )
