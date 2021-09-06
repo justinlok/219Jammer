@@ -43,13 +43,16 @@ visible = false
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Ball" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0.097168, -58.5784 )
+position = Vector2( 0.556, -150 )
+scale = Vector2( 2, 2 )
 
 [node name="Burst" type="Sprite" parent="Ball"]
 position = Vector2( -0.713379, 55.8528 )
 rotation = 3.14159
 scale = Vector2( 0.200006, 0.200006 )
 texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="Ball"]
 
 [node name="Elevator" type="Sprite" parent="."]
 position = Vector2( -31.0796, 329.613 )
@@ -71,3 +74,5 @@ shape = SubResource( 1 )
 anims/crystal = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="Elevator"]
+
+[connection signal="tween_all_completed" from="Ball/Tween" to="." method="_on_Tween_tween_all_completed"]
