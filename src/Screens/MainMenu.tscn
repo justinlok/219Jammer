@@ -53,7 +53,6 @@ __meta__ = {
 margin_right = 121.0
 margin_bottom = 40.0
 rect_scale = Vector2( 1, 1 )
-next_scene_path = ""
 
 [node name="SandboxButton" parent="Menu" instance=ExtResource( 5 )]
 margin_top = 44.0
@@ -63,4 +62,5 @@ margin_bottom = 84.0
 [node name="QuitButton" parent="Menu" instance=ExtResource( 6 )]
 margin_right = 121.0
 size_flags_vertical = 3
+
 [connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]

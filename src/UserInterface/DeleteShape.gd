@@ -2,6 +2,9 @@ extends Area2D
 
 var is_delete_mode : bool = false
 
+func _ready():
+	self.visible = false
+
 func _input(event):
 	if event.is_action_pressed("editor_delete"):
 		is_delete_mode = true
