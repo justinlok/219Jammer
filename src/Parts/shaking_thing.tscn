@@ -1,17 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/sprites/flipper attach.png" type="Texture" id=1]
 [ext_resource path="res://src/Parts/shaking_thing.gd" type="Script" id=2]
+[ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 401.349, 104.325 )
 
 [node name="Shaking Thing" type="RigidBody2D"]
-rotation = 3.03338
+rotation = 3.01942
 scale = Vector2( 0.25, 0.25 )
+collision_mask = 0
 mode = 1
 contact_monitor = true
 script = ExtResource( 2 )
+bumper_strength = 50
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -26,5 +29,7 @@ rotation = -0.541052
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary_check"]
 position = Vector2( -9.45569, -2.35777 )
 shape = SubResource( 1 )
+
+[node name="DeleteShape" parent="." instance=ExtResource( 3 )]
 
 [connection signal="body_entered" from="." to="." method="_on_Shaking_Thing_body_entered"]

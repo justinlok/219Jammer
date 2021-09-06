@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/sprites/Trianglebumper placeholder.png" type="Texture" id=1]
 [ext_resource path="res://Triangle_Bumper.gd" type="Script" id=2]
+[ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 112.172, 41.1487 )
 
 [node name="Triangle_Bumper" type="Area2D"]
 scale = Vector2( 0.35, 0.35 )
+collision_mask = 0
 script = ExtResource( 2 )
 bumper_strength = 35
 score = 50
@@ -37,5 +39,7 @@ shape = SubResource( 1 )
 position = Vector2( 98.7158, -33.8746 )
 rotation = 1.0472
 shape = SubResource( 1 )
+
+[node name="DeleteShape" parent="." instance=ExtResource( 3 )]
 
 [connection signal="body_entered" from="." to="." method="_on_Triangle_Bumper_body_entered"]

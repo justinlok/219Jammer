@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Square_Bumper.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/square_bumper_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 96.6207, 96.1955 )
@@ -11,6 +12,7 @@ extents = Vector2( 95.9567, 41.1487 )
 
 [node name="Square_Bumper" type="Area2D"]
 scale = Vector2( 0.3, 0.3 )
+collision_mask = 0
 script = ExtResource( 1 )
 bumper_strength = 35
 score = 50
@@ -49,5 +51,7 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
 position = Vector2( 11.2221, 148.743 )
 shape = SubResource( 2 )
+
+[node name="DeleteShape" parent="." instance=ExtResource( 3 )]
 
 [connection signal="body_entered" from="." to="." method="_on_Square_Bumper_body_entered"]
