@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/zap_bug_pt2.wav-9088e91c6534a711e3a71bacf9d8e00a.sample"
+path="res://.import/sword_2.wav-4180974f841764bcd2ff92f3c5280941.sample"
 
 [deps]
 
-source_file="res://src/Sounds/zap_bug_pt2.wav"
-dest_files=[ "res://.import/zap_bug_pt2.wav-9088e91c6534a711e3a71bacf9d8e00a.sample" ]
+source_file="res://src/Parts/sword_2.wav"
+dest_files=[ "res://.import/sword_2.wav-4180974f841764bcd2ff92f3c5280941.sample" ]
 
 [params]
 

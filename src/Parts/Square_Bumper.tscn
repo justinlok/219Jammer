@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Parts/Square_Bumper.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/square_bumper.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/square_bumper_placeholder.png" type="Texture" id=2]
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Sounds/mosquito_wall_hit.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 96.6207, 96.1955 )
@@ -23,9 +22,8 @@ position = Vector2( 13.0492, 8.73965 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 9.36479, -4.37018 )
-scale = Vector2( 0.408911, 0.409327 )
-z_index = 1
+position = Vector2( 13.4049, 10.1109 )
+scale = Vector2( 0.301543, 0.301543 )
 texture = ExtResource( 2 )
 
 [node name="Top" type="Area2D" parent="."]
@@ -55,8 +53,5 @@ position = Vector2( 11.2221, 148.743 )
 shape = SubResource( 2 )
 
 [node name="DeleteShape" parent="." instance=ExtResource( 3 )]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_Square_Bumper_body_entered"]

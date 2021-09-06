@@ -6,12 +6,10 @@ onready var sprite = get_node("Sprite")
 onready var tween = get_node("Tween")
 onready var big = sprite.scale*1.5
 onready var small = sprite.duplicate(true)
-onready var player = get_node("AudioStreamPlayer2D")
 func light_up():
 	
 	tween.interpolate_property(sprite, "scale", big, small.scale, 0.1, Tween.TRANS_ELASTIC, Tween.EASE_OUT, 0)
 	tween.start()
-	player.play()
 
 
 func _on_Bumper_body_entered(body):
