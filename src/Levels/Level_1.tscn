@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/UserInterface/Canvas.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://src/Parts/25 Bumper.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Parts/Triangle_Bumper.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Parts/Launcher.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/sprites/level_1bg.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 193.123, 3.2146 )
@@ -26,6 +28,9 @@ height = 20.0007
 [node name="Sandbox" type="Node2D"]
 
 [node name="Canvas" parent="." instance=ExtResource( 2 )]
+
+[node name="Launcher" parent="." instance=ExtResource( 10 )]
+position = Vector2( 685.663, 555.039 )
 
 [node name="lower bound" type="RigidBody2D" parent="."]
 mode = 1
@@ -173,29 +178,25 @@ mode = 1
 position = Vector2( -0.183865, 18.968 )
 polygon = PoolVector2Array( 264.387, 450.761, 265.253, 487.836, 264.803, 524.548, 613.59, 524.103, 608.327, 520.413, 505.791, 519.262, 379.137, 514.596, 310.753, 508.402, 289.938, 502.174, 275.345, 489.51, 267.349, 479.005 )
 
-[node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 512.211, 25.1948 )
-script = null
-
 [node name="FlipperRight" parent="." instance=ExtResource( 5 )]
 position = Vector2( 574.261, 650.443 )
 rotation = -0.392699
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="FlipperRight2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 598.94, 395.525 )
 rotation = -0.392699
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.7, 0.7 )
 
 [node name="FlipperLeft" parent="." instance=ExtResource( 3 )]
 position = Vector2( 445.401, 652.023 )
 rotation = 0.392699
-scale = Vector2( 0.5, 0.6 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="FlipperLeft2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 364.598, 524.91 )
 rotation = 0.392699
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.7, 0.7 )
 
 [node name="100 Bumper" parent="." instance=ExtResource( 4 )]
 position = Vector2( 638.559, 363.66 )
@@ -255,12 +256,12 @@ position = Vector2( 403.978, 420.016 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Shaking Thing2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 410, 610 )
+position = Vector2( 410.354, 605.757 )
 rotation = 0.122177
 scale = Vector2( 0.08, -0.08 )
 
 [node name="Shaking Thing" parent="." instance=ExtResource( 8 )]
-position = Vector2( 614, 610 )
+position = Vector2( 603.747, 603.282 )
 scale = Vector2( 0.08, 0.08 )
 
 [node name="50 Bumper7" parent="." instance=ExtResource( 6 )]
@@ -274,3 +275,11 @@ scale = Vector2( 0.25, 0.25 )
 [node name="25 Bumper6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 580.188, 508.164 )
 scale = Vector2( 0.25, 0.25 )
+
+[node name="level_1bg" type="Sprite" parent="."]
+position = Vector2( 518.436, 364.613 )
+scale = Vector2( 0.943869, 0.94577 )
+texture = ExtResource( 11 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 687.721, 468.502 )
