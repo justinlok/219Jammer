@@ -39,10 +39,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -87.9797
-margin_top = -149.303
-margin_right = 33.0203
-margin_bottom = -21.3026
+margin_left = -149.0
+margin_top = -118.0
+margin_right = 49.0
+margin_bottom = 55.0
 rect_scale = Vector2( 1.58447, 1.31774 )
 size_flags_vertical = 3
 __meta__ = {
@@ -50,17 +50,20 @@ __meta__ = {
 }
 
 [node name="CampaignButton" parent="Menu" instance=ExtResource( 2 )]
-margin_right = 121.0
-margin_bottom = 40.0
+margin_right = 198.0
+margin_bottom = 55.0
 rect_scale = Vector2( 1, 1 )
+text = "Howardo Special"
 
 [node name="SandboxButton" parent="Menu" instance=ExtResource( 3 )]
-margin_top = 44.0
-margin_right = 121.0
-margin_bottom = 84.0
+margin_top = 59.0
+margin_right = 198.0
+margin_bottom = 114.0
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 6 )]
-margin_right = 121.0
+margin_top = 118.0
+margin_right = 198.0
+margin_bottom = 173.0
 size_flags_vertical = 3
 
 [connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]
