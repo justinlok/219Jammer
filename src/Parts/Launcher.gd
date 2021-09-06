@@ -11,7 +11,7 @@ func _ready():
 	elevator.frame = 0
 	ball.set_mode(1)
 	elevator.position = Vector2(-30.32, -84.731)
-	ball.position = Vector2(0.556, -180)
+	ball.position = Vector2(0.556, -185)
 	burst.visible = false
 	play_entrance()
 
@@ -24,10 +24,11 @@ func play_entrance():
 	tweenNode.start()
 	ball_tweenNode.start()
 
-func _process(delta):
-	if Input.is_action_just_pressed("Launch") and launch_ready:
+func _input(event):
+	if event.is_action("Launch") and launch_ready:
 		ball.set_mode(0)
-		ball.set_linear_velocity(Vector2(0,1000))
+		ball.set_linear_velocity(Vector2(0,-1000))
+		launch_ready = false
 
 func _on_Tween_tween_all_completed():
 	launch_ready = true
