@@ -5,7 +5,7 @@
 
 [node name="100 Bumper" instance=ExtResource( 1 )]
 scale = Vector2( 0.6, 0.6 )
-bumper_strength = 100
+bumper_strength = 50
 score = 100
 
 [node name="Sprite" parent="." index="2"]
