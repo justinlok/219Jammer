@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Main.gd" type="Script" id=1]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://src/Parts/25 Bumper.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Parts/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/Aluminum L.png" type="Texture" id=9]
+[ext_resource path="res://src/Parts/FlipperR.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Parts/Flippers.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2062.8, 68.1671 )
@@ -26,6 +29,8 @@ layer = 100
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 2 )]
 
 [node name="EditorControls" parent="UserInterface" instance=ExtResource( 3 )]
+anchor_left = -0.000643253
+anchor_right = 0.999357
 
 [node name="wood slab" parent="." instance=ExtResource( 4 )]
 position = Vector2( 274.673, 181.107 )
@@ -66,7 +71,7 @@ shape = SubResource( 2 )
 position = Vector2( 702.116, 56.029 )
 
 [node name="25 Bumper" parent="." instance=ExtResource( 7 )]
-position = Vector2( 433.167, 474.503 )
+position = Vector2( 577.263, 238.937 )
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 709.646, 207.339 )
@@ -76,7 +81,7 @@ position = Vector2( 430.06, 349.016 )
 id = 1
 
 [node name="Aluminum L" type="RigidBody2D" parent="."]
-position = Vector2( 207.662, 347.915 )
+position = Vector2( 155.832, 278.499 )
 mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Aluminum L"]
@@ -84,3 +89,21 @@ polygon = PoolVector2Array( -118, -150, -150, -150, -150, 150, 150, 150, 150, 11
 
 [node name="Sprite" type="Sprite" parent="Aluminum L"]
 texture = ExtResource( 9 )
+
+[node name="FlipperR" parent="." instance=ExtResource( 10 )]
+position = Vector2( 793.921, 580.348 )
+rotation = 2.81696
+scale = Vector2( 1.4, -1.4 )
+
+[node name="Flippers" parent="." instance=ExtResource( 12 )]
+position = Vector2( 528.681, 581.933 )
+rotation = 0.324631
+
+[node name="shaking thing" parent="." instance=ExtResource( 11 )]
+position = Vector2( 754.205, 265.982 )
+rotation = -3.68264
+
+[node name="Shaking thing R" parent="." instance=ExtResource( 11 )]
+position = Vector2( 637.136, 384.147 )
+rotation = -2.92343
+scale = Vector2( -0.25, 0.25 )

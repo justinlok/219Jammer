@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/flipper attach.png" type="Texture" id=1]
+[ext_resource path="res://src/Parts/shaking_thing.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 401.349, 104.325 )
+
+[node name="Shaking Thing" type="RigidBody2D"]
+rotation = 3.03338
+scale = Vector2( 0.25, 0.25 )
+mode = 1
+contact_monitor = true
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -296.299, -164.039, -312.641, -132.274, -334.129, -61.2097, -365.528, 80.131, -404.269, 239.604, -396.839, 259.328, -342.68, 300.665, -322.312, 305.756, -296.39, 301.59, -201.635, 253.912, 103.877, 95.9246, 315.236, -13.2731, 344.121, -35.7234, 364.489, -62.3401, 367.96, -87.3366, 359.628, -107.658, 342.501, -135.201, 310.978, -165.891, 281.121, -175.149, 201.641, -177.463, -254.406, -178.852 )
+
+[node name="Boundary_check" type="Area2D" parent="."]
+position = Vector2( 68.889, 186.622 )
+rotation = -0.541052
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary_check"]
+position = Vector2( -2.77529, -6.92598 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_Shaking_Thing_body_entered"]
