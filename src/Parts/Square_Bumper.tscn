@@ -10,8 +10,9 @@ extents = Vector2( 96.6207, 96.1955 )
 extents = Vector2( 95.9567, 41.1487 )
 
 [node name="Square_Bumper" type="Area2D"]
+scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 1 )
-bumper_strength = 100
+bumper_strength = 35
 score = 50
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

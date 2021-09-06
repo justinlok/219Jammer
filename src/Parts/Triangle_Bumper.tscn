@@ -7,8 +7,9 @@
 extents = Vector2( 112.172, 41.1487 )
 
 [node name="Triangle_Bumper" type="Area2D"]
+scale = Vector2( 0.35, 0.35 )
 script = ExtResource( 2 )
-bumper_strength = 100
+bumper_strength = 35
 score = 50
 
 [node name="Sprite" type="Sprite" parent="."]
