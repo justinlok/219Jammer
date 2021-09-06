@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Main.gd" type="Script" id=1]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Parts/Flipper Right.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Parts/Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Parts/100 Bumper.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Parts/25 Bumper.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Parts/Launcher.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Parts/50 Bumper.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Parts/Flipper Left.tscn" type="PackedScene" id=12]
 
 [node name="Sandbox" type="Node2D"]
 position = Vector2( 0, -1.88773 )
@@ -13,10 +20,104 @@ script = ExtResource( 1 )
 layer = 100
 
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 2 )]
+margin_left = 8.63208
+margin_top = -40.4122
+margin_right = 8.63208
+margin_bottom = -40.4122
 
 [node name="EditorControls" parent="UserInterface" instance=ExtResource( 3 )]
 anchor_left = -0.000643253
 anchor_right = 0.999357
 
 [node name="Wall" parent="." instance=ExtResource( 5 )]
-position = Vector2( 347.832, 368.44 )
+position = Vector2( 345.718, 360.31 )
+rotation = 1.5708
+scale = Vector2( 2, 1 )
+
+[node name="Wall2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 693.189, 361.433 )
+rotation = 1.5708
+scale = Vector2( 2, 1 )
+
+[node name="Wall3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 519.7, 43.776 )
+
+[node name="Wall4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 520.822, 674.6 )
+
+[node name="Launcher" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673.734, 528.031 )
+
+[node name="50 Bumper" parent="." instance=ExtResource( 9 )]
+position = Vector2( 545.854, 167.263 )
+
+[node name="25 Bumper" parent="." instance=ExtResource( 7 )]
+position = Vector2( 452.186, 154.411 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="100 Bumper" parent="." instance=ExtResource( 6 )]
+position = Vector2( 504.652, 231.887 )
+
+[node name="FlipperLeft" parent="." instance=ExtResource( 12 )]
+position = Vector2( 432.309, 580.621 )
+rotation = 0.261799
+scale = Vector2( 0.6, 0.6 )
+
+[node name="FlipperLeft2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 355.736, 378.433 )
+rotation = 0.261799
+scale = Vector2( 0.6, 0.6 )
+
+[node name="FlipperRight" parent="." instance=ExtResource( 4 )]
+position = Vector2( 584.569, 582.388 )
+rotation = -0.261799
+scale = Vector2( 0.6, 0.6 )
+
+[node name="FlipperRight2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 637.538, 379.635 )
+rotation = -0.261799
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Wall5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 657.706, 384.184 )
+rotation = 1.5708
+scale = Vector2( 1.5, 0.6 )
+
+[node name="Wall7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 682.381, 110.824 )
+rotation = 1.309
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Wall8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 683.011, 107.044 )
+rotation = 1.0472
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Wall9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 682.381, 95.7048 )
+rotation = 0.785398
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Wall10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 682.381, 85.6254 )
+rotation = 0.523599
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Wall11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 682.381, 67.3566 )
+rotation = 0.261799
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Shaking Thing" parent="." instance=ExtResource( 11 )]
+position = Vector2( 614.332, 566.749 )
+rotation = 3.14159
+scale = Vector2( 0.09, 0.09 )
+
+[node name="Shaking Thing2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 393.896, 559.683 )
+rotation = 0.0
+scale = Vector2( 0.09, -0.09 )
+
+[node name="Wall6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 479.764, 634.983 )
+rotation = 0.174533
