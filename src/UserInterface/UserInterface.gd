@@ -12,6 +12,7 @@ var paused: = false setget set_paused
 func _ready() -> void:
 	PlayerData.connect("score_updated", self, "update_interface")
 	PlayerData.connect("player_died", self, "on_PlayerData_player_died")
+	self.visible = false
 	update_interface()
 
 
@@ -24,6 +25,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause") and pause_title.text != LostBall_Message:
 		self.paused = !paused
 		scene_tree.set_input_as_handled()
+		self.visible = paused
 
 func update_interface() -> void:
 	score.text = "Score: %s" % PlayerData.score
