@@ -1,22 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Main.gd" type="Script" id=1]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Parts/Wood Slab.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Parts/Wall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Parts/Aluminum L.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Parts/25 Bumper.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Parts/Portal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Parts/FlipperR.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Parts/Flippers.tscn" type="PackedScene" id=12]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2062.8, 68.1671 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 74.2856, 2929.74 )
 
 [node name="Sandbox" type="Node2D"]
 position = Vector2( 0, -1.88773 )
@@ -30,68 +16,3 @@ layer = 100
 [node name="EditorControls" parent="UserInterface" instance=ExtResource( 3 )]
 anchor_left = -0.000643253
 anchor_right = 0.999357
-
-[node name="wood slab" parent="." instance=ExtResource( 4 )]
-position = Vector2( 274.673, 181.107 )
-
-[node name="Wall" parent="." instance=ExtResource( 5 )]
-position = Vector2( 474.775, 171.76 )
-
-[node name="Room Wall 1" type="RigidBody2D" parent="."]
-mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room Wall 1"]
-position = Vector2( 0, 3000 )
-shape = SubResource( 1 )
-
-[node name="Room Wall 2" type="RigidBody2D" parent="."]
-mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room Wall 2"]
-position = Vector2( 2000, 0 )
-shape = SubResource( 2 )
-
-[node name="Room Wall 3" type="RigidBody2D" parent="."]
-position = Vector2( -939.742, 63.4961 )
-mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room Wall 3"]
-position = Vector2( 949.279, -3066 )
-shape = SubResource( 1 )
-
-[node name="Room Wall 4" type="RigidBody2D" parent="."]
-mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room Wall 4"]
-position = Vector2( -2000, 0 )
-shape = SubResource( 2 )
-
-[node name="25 Bumper" parent="." instance=ExtResource( 7 )]
-position = Vector2( 577.263, 238.937 )
-
-[node name="Portal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 709.646, 207.339 )
-
-[node name="Portal2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 430.06, 349.016 )
-id = 1
-
-[node name="Aluminum L" parent="." instance=ExtResource( 6 )]
-
-[node name="FlipperR" parent="." instance=ExtResource( 10 )]
-position = Vector2( 793.921, 580.348 )
-rotation = 2.81696
-scale = Vector2( 1.4, -1.4 )
-
-[node name="Flippers" parent="." instance=ExtResource( 12 )]
-position = Vector2( 528.681, 581.933 )
-rotation = 0.324631
-
-[node name="shaking thing" parent="." instance=ExtResource( 11 )]
-position = Vector2( 754.205, 265.982 )
-rotation = -3.68264
-
-[node name="Shaking thing R" parent="." instance=ExtResource( 11 )]
-position = Vector2( 637.136, 384.147 )
-rotation = -2.92343
-scale = Vector2( -0.25, 0.25 )
