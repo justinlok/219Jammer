@@ -5,8 +5,9 @@ onready var Top_check = get_node("Top")
 onready var Left_check = get_node("Left")
 onready var Right_check = get_node("Right")
 onready var Bottom_check = get_node("Bottom")
+onready var player = get_node("AudioStreamPlayer2D")
 func light_up():
-	pass
+	player.play()
 
 
 func _on_Square_Bumper_body_entered(body):
@@ -20,4 +21,4 @@ func _on_Square_Bumper_body_entered(body):
 	else:
 		direction = Vector2(cos(deg2rad(rotation_degrees+90)),sin(deg2rad(rotation_degrees+90)))
 	body.set_linear_velocity(10*bumper_strength*direction.normalized())
-
+	light_up()
