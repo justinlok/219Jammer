@@ -7,6 +7,7 @@
 extents = Vector2( 161.527, 10 )
 
 [node name="Wall" type="RigidBody2D"]
+collision_mask = 0
 mode = 1
 
 [node name="DeleteShape" parent="." instance=ExtResource( 1 )]

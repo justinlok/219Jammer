@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Bumper" type="Area2D"]
+collision_mask = 0
 script = ExtResource( 1 )
 bumper_strength = 20
 

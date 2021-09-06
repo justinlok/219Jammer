@@ -10,6 +10,7 @@ extents = Vector2( 401.349, 104.325 )
 [node name="Shaking Thing" type="RigidBody2D"]
 rotation = 3.03338
 scale = Vector2( 0.25, 0.25 )
+collision_mask = 0
 mode = 1
 contact_monitor = true
 script = ExtResource( 2 )
