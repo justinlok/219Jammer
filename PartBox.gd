@@ -29,7 +29,7 @@ func _ready():
 		_add_button(file)
 		pass
 
-func _process(delta):
+func _process(_delta):
 	if  new_part != null:
 		# Part ghosting when selected.
 		if is_instance_valid(new_part):

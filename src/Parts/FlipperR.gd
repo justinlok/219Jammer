@@ -2,7 +2,7 @@ extends RigidBody2D
 onready var TweenNode = get_node("Tween")
 onready var Init_rotation = self.rotation_degrees
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_pressed("FlipperR"):
 		TweenNode.interpolate_property(self, "rotation_degrees", null, Init_rotation+70, 0.06, Tween.TRANS_LINEAR, Tween.EASE_IN, 0)
 		TweenNode.start()

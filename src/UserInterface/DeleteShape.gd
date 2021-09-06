@@ -14,7 +14,7 @@ func _input(event):
 		self.visible = false
 
 
-func _on_DeleteShape_input_event(viewport, event, shape_idx):
+func _on_DeleteShape_input_event(_viewport, event, _shape_idx):
 	if is_delete_mode && event.is_pressed():
 		get_parent().queue_free()
 
