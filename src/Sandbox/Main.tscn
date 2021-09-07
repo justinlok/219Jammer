@@ -106,11 +106,12 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Shaking Thing" parent="." instance=ExtResource( 11 )]
 position = Vector2( 521.547, 299.87 )
 rotation = 5.41925
-scale = Vector2( -1, 1 )
+scale = Vector2( -0.08, 0.08 )
 
 [node name="Shaking Thing2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 397.735, 231.709 )
 rotation = 1.62665
+scale = Vector2( 0.08, 0.08 )
 
 [node name="Wall6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 502.976, 659.042 )
