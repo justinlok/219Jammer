@@ -66,4 +66,9 @@ margin_right = 198.0
 margin_bottom = 173.0
 size_flags_vertical = 3
 
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 34.0
+text = "Made by 5 cool people"
+
 [connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]

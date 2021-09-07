@@ -33,6 +33,7 @@ func _add_button(file : String) -> void:
 	new_button.text = file.trim_suffix(".jpeg")
 	new_button.text = file.trim_suffix(".png")
 	self.add_child(new_button)
+	print_debug("button get!")
 	pass
 
 func set_selected_part(path) -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/Main.gd" type="Script" id=1]
 [ext_resource path="res://src/UserInterface/Canvas.tscn" type="PackedScene" id=2]
@@ -14,15 +14,32 @@
 [ext_resource path="res://src/Parts/Flipper Left.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Parts/Triangle Bumper.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/sprites/backgrounds/Sky.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/backgrounds/donteverusethis.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/backgrounds/Bubbles.jpeg" type="Texture" id=16]
 
 [node name="Sandbox" type="Node2D"]
 position = Vector2( 0, -1.88773 )
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 511.361, 375.073 )
+position = Vector2( 513.055, 373.067 )
 scale = Vector2( 1.02, 1.02 )
+z_index = -1
+texture = ExtResource( 16 )
+
+[node name="Background2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 510.227, 365.289 )
+scale = Vector2( 1.02, 1.02 )
+z_index = -1
 texture = ExtResource( 14 )
+
+[node name="Background3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 506.691, 372.36 )
+scale = Vector2( 1.02, 1.02 )
+z_index = -1
+texture = ExtResource( 15 )
 
 [node name="Ball2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 676.446, 392.913 )
@@ -32,7 +49,6 @@ position = Vector2( 676.446, 392.913 )
 [node name="Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( 328.731, 366.47 )
 rotation = 1.5708
-scale = Vector2( 2.2, 1 )
 
 [node name="Wall2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 693.189, 361.433 )
@@ -51,16 +67,19 @@ scale = Vector2( 1.1, 1 )
 position = Vector2( 618.699, 223.793 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Triangle_Bumper" parent="50 Bumper" instance=ExtResource( 13 )]
-position = Vector2( -44.1724, 656.556 )
+[node name="Triangle_Bumper" parent="." instance=ExtResource( 13 )]
+position = Vector2( 605.447, 420.76 )
+scale = Vector2( 0.3, 0.3 )
 
-[node name="Triangle_Bumper3" parent="50 Bumper" instance=ExtResource( 13 )]
-position = Vector2( -23.228, -301.878 )
+[node name="Triangle_Bumper3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 611.731, 133.23 )
 rotation = 1.309
+scale = Vector2( 0.3, 0.3 )
 
-[node name="Triangle_Bumper4" parent="50 Bumper" instance=ExtResource( 13 )]
-position = Vector2( -140.613, -189.229 )
+[node name="Triangle_Bumper4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 576.515, 167.024 )
 rotation = 1.309
+scale = Vector2( 0.3, 0.3 )
 
 [node name="25 Bumper3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 493.458, 203.507 )

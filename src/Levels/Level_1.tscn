@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/UserInterface/Canvas.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://src/Parts/Launcher.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/sprites/Level1_brick_bg.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/backgrounds/Bubbles.jpeg" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/backgrounds/Sky.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/backgrounds/donteverusethis.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 193.123, 3.2146 )
@@ -33,7 +35,22 @@ height = 20.0007
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 515.127, 360.279 )
 scale = Vector2( 1.11002, 1.11002 )
+z_index = -1
 texture = ExtResource( 12 )
+
+[node name="Background2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 511, 361 )
+scale = Vector2( 1.05, 1.08 )
+z_index = -1
+texture = ExtResource( 13 )
+
+[node name="Background3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 511, 365 )
+scale = Vector2( 1.05, 1.08 )
+z_index = -1
+texture = ExtResource( 14 )
 
 [node name="Walls" type="Sprite" parent="."]
 position = Vector2( 509.076, 374.065 )

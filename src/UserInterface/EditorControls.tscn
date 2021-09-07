@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://PartBox.gd" type="Script" id=1]
-[ext_resource path="res://src/UserInterface/Background.gd" type="Script" id=2]
+[ext_resource path="res://src/UserInterface/Button.gd" type="Script" id=2]
 
 [node name="EditorControls" type="Control"]
 anchor_right = 1.0
@@ -20,14 +20,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="VBoxContainer" parent="."]
-anchor_right = 2.917
-anchor_bottom = 0.284
-margin_left = 862.0
-margin_top = 4.0
-margin_right = 806.976
-margin_bottom = 65.992
+[node name="Button" type="Button" parent="."]
+margin_left = 5.0
+margin_top = 664.0
+margin_right = 141.0
+margin_bottom = 684.0
+text = "Change Background"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
