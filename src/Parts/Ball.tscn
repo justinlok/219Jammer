@@ -21,7 +21,7 @@ script = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
-[node name="steel ball bearing" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.600934, 0.0760596 )
 scale = Vector2( 0.0439126, 0.0439126 )
 texture = ExtResource( 1 )

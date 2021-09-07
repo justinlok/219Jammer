@@ -1,11 +1,13 @@
 extends Area2D
+
 export (int) var bumper_strength
 export (int) var score
 
+onready var player_data: Node = get_node("/root/PlayerData")
 onready var big : Vector2 = $Sprite.scale*1.5
 onready var small : Sprite = $Sprite.duplicate(true)
 
-func _light_up():
+func _light_up() -> void:
 	$Tween.interpolate_property($Sprite, "scale", big, small.scale, 0.1, $Tween.TRANS_ELASTIC, $Tween.EASE_OUT, 0)
 	$Tween.start()
 	$AudioStreamPlayer2D.play()
@@ -20,5 +22,5 @@ func _on_Bumper_body_entered(body):
 		body.set_linear_velocity(body_speed*new_angle.normalized())
 	else:
 		body.set_linear_velocity(10*bumper_strength*new_angle.normalized())
-
+	player_data.add_score(score)
 	_light_up()

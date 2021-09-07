@@ -30,6 +30,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Ball" type="Label" parent="."]
+margin_left = 862.148
+margin_top = 71.1745
+margin_right = 902.148
+margin_bottom = 105.174
+text = "Ball: %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PauseOverlay" type="ColorRect" parent="."]
 visible = false
 anchor_right = 1.0

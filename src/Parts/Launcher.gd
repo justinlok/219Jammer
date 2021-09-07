@@ -12,7 +12,7 @@ func _ready():
 	_play_reload()
 
 func _play_reload():
-	tween.interpolate_property($Elevator, "position:y", null, elevator_length, 2.0, Tween.TRANS_LINEAR, Tween.EASE_OUT, 0)
+	tween.interpolate_property($Elevator, "position:y", null, elevator_length, 1.4, Tween.TRANS_LINEAR, Tween.EASE_IN, 0)
 	animation_player.play("crystal")
 	tween.start()
 	

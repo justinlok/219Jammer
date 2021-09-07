@@ -2,7 +2,6 @@ extends Control
 
 onready var scene_tree: = get_tree()
 onready var pause_overlay: ColorRect = get_node("PauseOverlay")
-
 onready var pause_title: Label = get_node("PauseOverlay/Title")
 
 const LostBall_Message: = "You Lost the Ball"
@@ -12,7 +11,6 @@ var paused: = false setget set_paused
 func _ready() -> void:
 	PlayerData.connect("score_updated", self, "update_interface")
 	PlayerData.connect("player_died", self, "on_PlayerData_player_died")
-	self.visible = false
 	update_interface()
 
 
