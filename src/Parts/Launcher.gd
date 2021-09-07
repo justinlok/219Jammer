@@ -1,20 +1,19 @@
 extends Node2D
 
-onready var elevator = get_node("Elevator")
-onready var anim_player = get_node("Elevator/AnimationPlayer")
-onready var tweenNode = get_node("Elevator/Tween")
-var launch_ready = false
+onready var animation_player : AnimationPlayer = get_node("Elevator/AnimationPlayer")
+onready var tween : Tween = get_node("Elevator/Tween")
+
 func _ready():
-	elevator.frame = 0
-	elevator.position = Vector2(-30.32, -84.731)
+	$Elevator.frame = 0
+	$Elevator.position = Vector2(-30.32, -84.731)
 
 	play_entrance()
 
 func play_entrance():
 	var end = 329.613
-	tweenNode.interpolate_property(elevator, "position:y", null, end, 2.0, Tween.TRANS_LINEAR, Tween.EASE_OUT, 0)
-	anim_player.play("crystal")
-	tweenNode.start()
+	tween.interpolate_property($Elevator, "position:y", null, end, 2.0, Tween.TRANS_LINEAR, Tween.EASE_OUT, 0)
+	animation_player.play("crystal")
+	tween.start()
 
 func _input(event):
 	var balls = []
@@ -25,6 +24,3 @@ func _input(event):
 	if event.is_action("Launch"):
 		for ball in balls:
 			ball.set_linear_velocity(Vector2(0,-1000))
-
-func _on_Tween_tween_all_completed():
-	launch_ready = true

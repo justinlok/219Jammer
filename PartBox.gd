@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 onready var PART_BUTTON : PackedScene = preload("res://src/UserInterface/PartButton.tscn")
-onready var Sandbox : Node2D = find_parent("Sandbox")
+onready var sandbox : Node2D = find_parent("Sandbox")
 const PARTS_DIR : String = "res://src/Parts/"
 var new_part : Node2D = null
 var new_part_collision_shapes = []
@@ -106,7 +106,7 @@ func set_selected_part(path) -> void:
 	new_part = load(path).instance()
 	new_part.modulate = Color(
 		new_part.modulate.r, new_part.modulate.g, new_part.modulate.b, 0.5)
-	Sandbox.add_child(new_part)
+	sandbox.add_child(new_part)
 	new_part.set_process(false)
 	new_part_collision_shapes = _GetAllEnabledCollisionShape2Ds(new_part)
 	for collision_shape_2d in new_part_collision_shapes:

@@ -98,14 +98,13 @@ rotation = 0.261799
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Shaking Thing" parent="." instance=ExtResource( 11 )]
-position = Vector2( 412.695, 524.154 )
-rotation = -1.8326
-scale = Vector2( 0.09, 0.09 )
+position = Vector2( 606.755, 530.504 )
+rotation = 4.97419
+scale = Vector2( -1, 1 )
 
 [node name="Shaking Thing2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 608.187, 531.037 )
-rotation = 4.97419
-scale = Vector2( 0.09, -0.09 )
+position = Vector2( 414.921, 525.481 )
+rotation = 1.309
 
 [node name="Wall6" parent="." instance=ExtResource( 5 )]
 position = Vector2( 502.976, 659.042 )
