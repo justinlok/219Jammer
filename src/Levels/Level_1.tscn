@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Parts/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/UserInterface/Canvas.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Parts/Triangle_Bumper.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Parts/Launcher.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/sprites/Level1_brick_bg.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 193.123, 3.2146 )
@@ -27,6 +28,11 @@ height = 20.0007
 [node name="Sandbox" type="Node2D"]
 
 [node name="Canvas" parent="." instance=ExtResource( 2 )]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 509.076, 374.065 )
+scale = Vector2( 0.266181, 0.266181 )
+texture = ExtResource( 11 )
 
 [node name="Launcher" parent="." instance=ExtResource( 10 )]
 position = Vector2( 689.906, 595.986 )
