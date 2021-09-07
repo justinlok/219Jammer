@@ -14,52 +14,54 @@ extents = Vector2( 95.9567, 41.1487 )
 [sub_resource type="AudioStreamRandomPitch" id=3]
 audio_stream = ExtResource( 4 )
 
-[node name="Square_Bumper" type="Area2D"]
-scale = Vector2( 0.3, 0.3 )
+[node name="Node2D" type="Node2D"]
+
+[node name="Square_Bumper" type="Area2D" parent="."]
+scale = Vector2( 0.2, 0.2 )
 collision_mask = 0
 script = ExtResource( 1 )
 bumper_strength = 35
 score = 50
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square_Bumper"]
 position = Vector2( 13.0492, 8.73965 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="Square_Bumper"]
 position = Vector2( 9.88482, -3.68018 )
 scale = Vector2( 0.408872, 0.408872 )
 texture = ExtResource( 2 )
 
-[node name="Top" type="Area2D" parent="."]
+[node name="Top" type="Area2D" parent="Square_Bumper"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square_Bumper/Top"]
 position = Vector2( 14.1959, -130.792 )
 shape = SubResource( 2 )
 
-[node name="Left" type="Area2D" parent="."]
+[node name="Left" type="Area2D" parent="Square_Bumper"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square_Bumper/Left"]
 position = Vector2( -129.14, 8.97517 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
-[node name="Right" type="Area2D" parent="."]
+[node name="Right" type="Area2D" parent="Square_Bumper"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square_Bumper/Right"]
 position = Vector2( 154.558, 7.78568 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
-[node name="Down" type="Area2D" parent="."]
+[node name="Down" type="Area2D" parent="Square_Bumper"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Square_Bumper/Down"]
 position = Vector2( 11.2221, 148.743 )
 shape = SubResource( 2 )
 
-[node name="DeleteShape" parent="." instance=ExtResource( 3 )]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Square_Bumper"]
 stream = SubResource( 3 )
 volume_db = -17.0
 
-[connection signal="body_entered" from="." to="." method="_on_Square_Bumper_body_entered"]
+[node name="DeleteShape" parent="." instance=ExtResource( 3 )]
+
+[connection signal="body_entered" from="Square_Bumper" to="Square_Bumper" method="_on_Square_Bumper_body_entered"]

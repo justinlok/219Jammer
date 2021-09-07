@@ -12,6 +12,7 @@ func _ready() -> void:
 	PlayerData.connect("score_updated", self, "update_interface")
 	PlayerData.connect("player_died", self, "on_PlayerData_player_died")
 	update_interface()
+	self.visible = false
 
 
 #This will be opaque popup on screen alerting the ball losses

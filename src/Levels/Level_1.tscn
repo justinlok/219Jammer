@@ -8,10 +8,11 @@
 [ext_resource path="res://src/Parts/50 Bumper.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Parts/25 Bumper.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Parts/Triangle_Bumper.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Parts/Triangle Bumper.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Parts/Launcher.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/sprites/Level1_brick_bg.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/Level1_background.jpeg" type="Texture" id=12]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 193.123, 3.2146 )
