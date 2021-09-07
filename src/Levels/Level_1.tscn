@@ -117,14 +117,6 @@ mode = 1
 position = Vector2( 16.4907, -11.2953 )
 polygon = PoolVector2Array( 572.604, 298.366, 593.31, 287.438, 606.67, 283.419, 617.359, 280.516, 628.938, 277.39, 643.193, 277.379, 651.214, 281.383, 655.896, 288.284, 657.164, 315.11, 658.253, 343.629, 657.728, 214.137, 643.669, 212.74, 632.087, 209.845, 617.204, 204.602, 599.124, 194.254, 594.892, 197.149, 598.928, 201.954, 617.204, 208.575, 632.81, 221.042, 634.499, 231.132, 633.577, 255.098, 625.425, 269.003, 610.581, 277.145, 596.088, 280.338, 581.947, 282.469, 570.64, 291.67 )
 
-[node name="curve 7" type="RigidBody2D" parent="."]
-mode = 1
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="curve 7"]
-position = Vector2( 307.23, 134.022 )
-scale = Vector2( 0.367522, 0.354414 )
-polygon = PoolVector2Array( 571.459, 255.275, 551.002, 275.527, 522.54, 305.904, 496.747, 341.143, 481.626, 368.28, 474.956, 387.722, 476.734, 394.608, 483.85, 393.797, 502.083, 382.456, 524.764, 362.61, 554.115, 329.802, 578.13, 298.614, 595.029, 272.691, 605.258, 247.579, 604.813, 239.883, 595.919, 240.288 )
-
 [node name="curve 8" type="RigidBody2D" parent="."]
 mode = 1
 
@@ -262,12 +254,13 @@ position = Vector2( 403.833, 419.453 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Shaking Thing2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 410, 605 )
-rotation = 0.122177
+position = Vector2( 546.53, 211.638 )
+rotation = 1.74358
 scale = Vector2( 0.08, -0.08 )
 
 [node name="Shaking Thing" parent="." instance=ExtResource( 8 )]
-position = Vector2( 614, 605 )
+position = Vector2( 413.333, 592.753 )
+rotation = 1.07861
 scale = Vector2( 0.08, 0.08 )
 
 [node name="50 Bumper7" parent="." instance=ExtResource( 6 )]
