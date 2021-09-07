@@ -108,7 +108,7 @@ mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="curve 4"]
 position = Vector2( 6.7022, 229.668 )
-polygon = PoolVector2Array( 337.926, 128.853, 339.909, 355.974, 341.208, 408.109, 343.316, 415.676, 349.205, 419.876, 369.431, 424.536, 396.783, 425.408, 445.326, 426.689, 446.347, 414.948, 415.257, 411.015, 387.538, 406.52, 368.435, 401.651, 354.388, 391.163, 344.239, 374.64, 344.46, 304.304, 348.698, 296.358, 353.731, 287.618, 360.923, 282.454, 361.706, 266.811, 352.579, 260.263, 346.626, 246.968, 342.298, 222.082, 342.671, 134.108, 353.346, 115.941, 367.754, 105.222, 366.959, 88.229, 359.123, 82.1617, 349.032, 80.4799, 339.993, 85.315, 337.891, 103.184 )
+polygon = PoolVector2Array( 337.926, 128.853, 339.909, 355.974, 341.208, 408.109, 343.316, 415.676, 349.205, 419.876, 369.431, 424.536, 396.783, 425.408, 445.326, 426.689, 446.347, 414.948, 416.046, 407.483, 390.79, 401.31, 369.744, 395.697, 356.836, 386.157, 347.575, 365.672, 344.46, 304.304, 348.698, 296.358, 353.731, 287.618, 360.923, 282.454, 361.706, 266.811, 352.579, 260.263, 346.626, 246.968, 342.298, 222.082, 342.671, 134.108, 353.346, 115.941, 367.754, 105.222, 366.959, 88.229, 359.123, 82.1617, 349.032, 80.4799, 339.993, 85.315, 337.891, 103.184 )
 
 [node name="curve 5" type="RigidBody2D" parent="."]
 mode = 1
@@ -122,7 +122,7 @@ mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="curve 6"]
 position = Vector2( 16.4907, -11.2953 )
-polygon = PoolVector2Array( 572.604, 298.366, 593.31, 287.438, 606.67, 283.419, 617.359, 280.516, 628.938, 277.39, 643.193, 277.379, 651.214, 281.383, 655.896, 288.284, 657.164, 315.11, 658.253, 343.629, 657.728, 214.137, 643.669, 212.74, 632.087, 209.845, 617.204, 204.602, 599.124, 194.254, 594.892, 197.149, 598.928, 201.954, 617.204, 208.575, 632.81, 221.042, 634.499, 231.132, 633.577, 255.098, 625.425, 269.003, 610.581, 277.145, 596.088, 280.338, 581.947, 282.469, 570.64, 291.67 )
+polygon = PoolVector2Array( 572.604, 298.366, 593.31, 287.438, 606.67, 283.419, 617.359, 280.516, 628.938, 277.39, 643.193, 277.379, 651.214, 281.383, 655.896, 288.284, 657.164, 315.11, 658.253, 343.629, 657.728, 214.137, 643.669, 212.74, 632.087, 209.845, 617.204, 204.602, 600.824, 194.722, 594.892, 197.149, 596.855, 205.834, 616.698, 211.787, 632.81, 221.042, 634.499, 231.132, 633.577, 255.098, 625.425, 269.003, 610.581, 277.145, 596.088, 280.338, 581.947, 282.469, 570.64, 291.67 )
 
 [node name="curve 8" type="RigidBody2D" parent="."]
 mode = 1
@@ -136,7 +136,7 @@ mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="curve 9"]
 position = Vector2( 29.0727, 174.581 )
-polygon = PoolVector2Array( 540.905, 469.834, 541.597, 481.157, 645.426, 482.205, 645.285, 331.835, 641.44, 340.767, 633.423, 349.504, 619.976, 353.997, 630.129, 362.484, 639.402, 381.982, 639.71, 413.073, 634.665, 437.88, 624.574, 453.226, 605.654, 459.743, 584.421, 463.948, 558.564, 468.573 )
+polygon = PoolVector2Array( 540.49, 469.118, 541.597, 481.157, 645.426, 482.205, 645.285, 331.835, 641.44, 340.767, 633.423, 349.504, 619.976, 353.997, 630.129, 362.484, 639.402, 381.982, 639.71, 413.073, 634.665, 437.88, 623.949, 449.357, 605.66, 455.874, 584.637, 461.129, 561.302, 465.754 )
 
 [node name="gate 1" type="RigidBody2D" parent="."]
 mode = 1
@@ -189,7 +189,7 @@ rotation = -0.392699
 scale = Vector2( 0.9, 0.9 )
 
 [node name="FlipperRight2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 600.589, 417.395 )
+position = Vector2( 620.882, 188.975 )
 rotation = -0.392699
 scale = Vector2( 0.75, 0.75 )
 
@@ -241,23 +241,23 @@ rotation = 0.261799
 scale = Vector2( 0.15, 0.15 )
 
 [node name="25 Bumper" parent="." instance=ExtResource( 7 )]
-position = Vector2( 568.53, 458.067 )
+position = Vector2( 537.09, 403.169 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="25 Bumper2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 609.722, 231.01 )
+position = Vector2( 608.928, 234.582 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="25 Bumper3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 385.249, 369.079 )
+position = Vector2( 448.875, 307.973 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="25 Bumper5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 437.21, 378.556 )
+position = Vector2( 438.772, 392.365 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="25 Bumper4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 403.833, 419.453 )
+position = Vector2( 448.908, 486.239 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Shaking Thing2" parent="." instance=ExtResource( 8 )]
@@ -273,16 +273,21 @@ position = Vector2( 646.134, 467.237 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="25 Bumper7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 564.615, 256.696 )
+position = Vector2( 533.117, 306.463 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="25 Bumper6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 583.721, 506.146 )
+position = Vector2( 546.19, 493.65 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="25 Bumper8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 531.827, 493.033 )
+position = Vector2( 493.25, 444.961 )
 scale = Vector2( 0.25, 0.25 )
+
+[node name="Shaking Thing Container" parent="." instance=ExtResource( 8 )]
+position = Vector2( 502.191, 252.672 )
+rotation = -0.261799
+scale = Vector2( 0.08, 0.08 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
 position = Vector2( 689.188, 517.676 )
