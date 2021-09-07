@@ -10,7 +10,7 @@
 [ext_resource path="res://src/Parts/shaking_thing.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Parts/Triangle Bumper.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Parts/Launcher.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/sprites/level_1_bg_plants.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/Level1_brick_bg.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/backgrounds/Bubbles.jpeg" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/backgrounds/Sky.png" type="Texture" id=13]
 [ext_resource path="res://assets/sprites/backgrounds/donteverusethis.png" type="Texture" id=14]
