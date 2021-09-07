@@ -2,7 +2,7 @@ extends Area2D
 
 export (int) var bumper_strength
 export (int) var score
-
+onready var player = get_node("AudioStreamPlayer2D")
 func _light_up():
 	pass
 
@@ -15,4 +15,5 @@ func _on_Triangle_Bumper_body_entered(body):
 	else:
 		direction = Vector2(cos(deg2rad(rotation_degrees-150)),sin(deg2rad(rotation_degrees-150)))
 	body.set_linear_velocity(10*bumper_strength*direction.normalized())
+	player.play()
 
