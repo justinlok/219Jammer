@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallbricks3.png-a1fec4d1d601a941392dd701b2563fe4.stex"
+path="res://.import/wallbricks3.png-5f302e6a32f5d29fda3f8112fa577baf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wallbricks3.png"
-dest_files=[ "res://.import/wallbricks3.png-a1fec4d1d601a941392dd701b2563fe4.stex" ]
+source_file="res://assets/sprites/wallbricks3.png"
+dest_files=[ "res://.import/wallbricks3.png-5f302e6a32f5d29fda3f8112fa577baf.stex" ]
 
 [params]
 

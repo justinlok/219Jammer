@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallbricks2.png-78c1bedc3dc6d715e3c52df8e2772942.stex"
+path="res://.import/Knight_Ball.png-7b1d2ca1fd86dd312b3d12471455f97f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/wallbricks2.png"
-dest_files=[ "res://.import/wallbricks2.png-78c1bedc3dc6d715e3c52df8e2772942.stex" ]
+source_file="res://assets/sprites/Knight_Ball.png"
+dest_files=[ "res://.import/Knight_Ball.png-7b1d2ca1fd86dd312b3d12471455f97f.stex" ]
 
 [params]
 

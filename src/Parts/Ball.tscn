@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/sprites/steel ball bearing.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/Knight_Ball.png" type="Texture" id=1]
 [ext_resource path="res://src/Parts/Ball.gd" type="Script" id=2]
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
 
@@ -22,6 +22,6 @@ script = ExtResource( 2 )
 shape = SubResource( 2 )
 
 [node name="steel ball bearing" type="Sprite" parent="."]
-position = Vector2( -0.280617, -1.26277 )
-scale = Vector2( 0.16, 0.16 )
+position = Vector2( -0.600934, 0.0760596 )
+scale = Vector2( 0.0439126, 0.0439126 )
 texture = ExtResource( 1 )
