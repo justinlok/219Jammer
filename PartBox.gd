@@ -79,11 +79,11 @@ func _input(event):
 			new_part.scale = Vector2(new_part.scale.x, new_part.scale.y - 0.1)
 	elif event.is_action_pressed("editor_place"):
 		if is_modifier:
-			print_debug("Pressed")
 			var path : String = new_part.filename
-			print_debug ("path " + path)
+			var old_part_scale = new_part.scale
+			var old_part_rotation = new_part.rotation
 			_place_part()
-			set_selected_part(path)
+			set_selected_part(path, old_part_scale, old_part_rotation)
 		else:
 			_place_part()
 
@@ -102,10 +102,12 @@ func _add_button(file : String) -> void:
 	self.add_child(new_button)
 	pass
 
-func set_selected_part(path) -> void:
+func set_selected_part(path, scale = Vector2(1, 1), rotation = 0.0) -> void:
 	new_part = load(path).instance()
 	new_part.modulate = Color(
 		new_part.modulate.r, new_part.modulate.g, new_part.modulate.b, 0.5)
+	new_part.scale = scale
+	new_part.rotation = rotation
 	sandbox.add_child(new_part)
 	new_part.set_process(false)
 	new_part_collision_shapes = _GetAllEnabledCollisionShape2Ds(new_part)

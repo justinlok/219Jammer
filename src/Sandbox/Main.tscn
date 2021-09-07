@@ -34,12 +34,6 @@ position = Vector2( 519.7, 43.776 )
 [node name="Wall4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 522.71, 706.692 )
 
-[node name="Launcher" parent="." instance=ExtResource( 8 )]
-position = Vector2( 678.925, 555.639 )
-
-[node name="Ball" parent="Launcher" instance=ExtResource( 10 )]
-position = Vector2( 4.6637, -138.121 )
-
 [node name="50 Bumper" parent="." instance=ExtResource( 9 )]
 position = Vector2( 524.261, 115.844 )
 scale = Vector2( 0.5, 0.5 )
@@ -184,3 +178,9 @@ scale = Vector2( 0.1, 1 )
 position = Vector2( 582.407, 200.285 )
 rotation = 0.785398
 scale = Vector2( 0.1, 1 )
+
+[node name="Launcher" parent="." instance=ExtResource( 8 )]
+position = Vector2( 671.782, 531.034 )
+
+[node name="Ball" parent="Launcher" instance=ExtResource( 10 )]
+position = Vector2( 4.6637, -138.121 )

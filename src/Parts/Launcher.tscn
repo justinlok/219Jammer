@@ -5,20 +5,20 @@
 [ext_resource path="res://assets/sprites/Elevator Shaft.png" type="Texture" id=4]
 [ext_resource path="res://src/Parts/Launcher.gd" type="Script" id=5]
 
-[sub_resource type="PhysicsMaterial" id=6]
+[sub_resource type="PhysicsMaterial" id=1]
 bounce = 1.0
 absorbent = true
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 118.356, 26.5082 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 7.74536, 347.545 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 347.612, 11.6677 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 5.0
 step = 0.09
 tracks/0/type = "value"
@@ -34,57 +34,59 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 36.7325, 96.7687 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 21.0738, 107.688 )
 
 [node name="Launcher" type="Node2D"]
-position = Vector2( 300, 300 )
-scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 5 )
 
 [node name="Shaft" type="Sprite" parent="."]
-position = Vector2( 0.143799, 69.1458 )
+position = Vector2( 1.71689, 69.1458 )
 rotation = -1.5708
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 4 )
 
 [node name="DeleteShape" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Elevator" type="Sprite" parent="."]
-position = Vector2( -31.0796, 329.613 )
-scale = Vector2( 0.35, 0.35 )
+position = Vector2( -15.874, -1.98424 )
+scale = Vector2( 0.2, 0.2 )
 z_index = 1
 texture = ExtResource( 3 )
 hframes = 6
 
 [node name="Elevator_floor" type="RigidBody2D" parent="Elevator"]
-position = Vector2( -25.8604, -172.711 )
+position = Vector2( -33.7974, -252.081 )
 mode = 3
-physics_material_override = SubResource( 6 )
+physics_material_override = SubResource( 1 )
 continuous_cd = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
 position = Vector2( 112.424, 73.5179 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
+one_way_collision = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
 position = Vector2( 221.316, -254.326 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Elevator/Elevator_floor"]
 position = Vector2( 10, -250 )
 rotation = -4.71239
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 one_way_collision = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Elevator"]
-anims/crystal = SubResource( 4 )
+anims/crystal = SubResource( 5 )
 
 [node name="Tween" type="Tween" parent="Elevator"]
 
 [node name="BallDetection" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BallDetection"]
-position = Vector2( -1.58917, 193.882 )
-shape = SubResource( 5 )
+position = Vector2( 3.17304, 71.6521 )
+shape = SubResource( 6 )
+
+[connection signal="tween_all_completed" from="Elevator/Tween" to="." method="_on_Tween_tween_all_completed"]
