@@ -1,33 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://src/UserInterface/UserInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UserInterface/EditorControls.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
 
 [node name="Canvas" type="CanvasLayer"]
 layer = 100
 
-[node name="UserInterface" type="Control" parent="." instance=ExtResource( 2 )]
-pause_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.51315
-margin_top = -44.1203
-margin_right = 6.51318
-margin_bottom = -44.1204
-theme = ExtResource( 4 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="UserInterface" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.029
+anchor_top = 0.044
+anchor_right = 0.977
+anchor_bottom = 0.939
+margin_left = 0.303999
+margin_top = 0.319998
+margin_right = -0.448059
+margin_bottom = -0.0800781
 
-[node name="EditorControls" type="Control" parent="." instance=ExtResource( 3 )]
+[node name="EditorControls" parent="." instance=ExtResource( 3 )]
 anchor_left = -0.000643253
 anchor_right = 0.999357
-anchor_bottom = 1.0
-margin_right = -952.0
-margin_bottom = -558.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 14.6587
+margin_top = 17.0
+margin_right = -951.342

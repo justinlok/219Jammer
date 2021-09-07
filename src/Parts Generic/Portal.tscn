@@ -1,8 +1,9 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://src/Parts/Portal.gd" type="Script" id=1]
+[ext_resource path="res://src/Parts Generic/Portal.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/portalspritesheetaligned.png" type="Texture" id=2]
 [ext_resource path="res://src/UserInterface/DeleteShape.tscn" type="PackedScene" id=3]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 22.1006

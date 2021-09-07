@@ -2,7 +2,7 @@ extends Control
 
 onready var scene_tree: = get_tree()
 onready var pause_overlay: ColorRect = get_node("PauseOverlay")
-onready var score: Label = get_node("Label")
+
 onready var pause_title: Label = get_node("PauseOverlay/Title")
 
 const LostBall_Message: = "You Lost the Ball"
@@ -28,7 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		self.visible = paused
 
 func update_interface() -> void:
-	score.text = "Score: %s" % PlayerData.score
+	$Score.text = "Score: %s" % PlayerData.score
 
 func set_paused(value: bool) -> void:
 	paused = value
