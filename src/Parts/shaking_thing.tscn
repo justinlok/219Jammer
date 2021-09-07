@@ -20,7 +20,7 @@ mode = 1
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )
-bumper_strength = 30
+bumper_strength = 60
 
 [node name="Sprite" type="Sprite" parent="Shaking Thing"]
 texture = ExtResource( 1 )
