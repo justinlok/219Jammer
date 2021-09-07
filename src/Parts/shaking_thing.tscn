@@ -49,6 +49,5 @@ stream = ExtResource( 4 )
 volume_db = -21.0
 
 [node name="DeleteShape" parent="." instance=ExtResource( 3 )]
-visible = true
 
 [connection signal="body_entered" from="Shaking Thing/Bumper_box" to="Shaking Thing" method="_on_Bumper_box_body_entered"]
