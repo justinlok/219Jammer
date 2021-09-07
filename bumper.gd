@@ -15,7 +15,7 @@ func light_up():
 
 
 func _on_Bumper_body_entered(body):
-	var new_angle = body.position - self.position
+	var new_angle = body.global_position - self.global_position
 	small = sprite.duplicate(true)
 	big = sprite.scale*1.5
 	var body_speed = sqrt(pow(body.get_linear_velocity().x,2)+pow(body.get_linear_velocity().y,2))
