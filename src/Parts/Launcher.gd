@@ -18,7 +18,6 @@ func _play_reload():
 	
 func _play_fire():
 	tween.interpolate_property($Elevator, "position:y", null, 0, 0.25, Tween.TRANS_LINEAR, Tween.EASE_OUT, 0)
-	animation_player.play("crystal")
 	tween.start()
 
 func _input(event):

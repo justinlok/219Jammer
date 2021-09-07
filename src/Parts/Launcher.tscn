@@ -19,7 +19,7 @@ extents = Vector2( 7.74536, 347.545 )
 extents = Vector2( 347.612, 11.6677 )
 
 [sub_resource type="Animation" id=5]
-length = 5.0
+length = 1.4
 step = 0.09
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -28,7 +28,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4.14, 4.23, 4.41, 4.5, 4.59 ),
+"times": PoolRealArray( 0, 0.45, 0.54, 0.72, 0.81, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
@@ -81,6 +81,10 @@ one_way_collision = true
 anims/crystal = SubResource( 5 )
 
 [node name="Tween" type="Tween" parent="Elevator"]
+
+[node name="Burst" type="Sprite" parent="Elevator"]
+position = Vector2( 79.37, 9.9212 )
+scale = Vector2( 5, 5 )
 
 [node name="BallDetection" type="Area2D" parent="."]
 visible = false
